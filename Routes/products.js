@@ -50,7 +50,7 @@ router.post("/products/", validateBody, async (req, res) => {
   }
 });
 
-router.put("/products/:id", async (req, res) => {
+router.put("/products/:id", validateBody, async (req, res) => {
   try {
     let { id } = req.params;
     id = parseInt(id);
